@@ -25,6 +25,7 @@
     <None Remove="Assets\OrangeTile.png" />
     <None Remove="Assets\PurpleTile.png" />
     <None Remove="Assets\RedTile.png" />
+    <None Remove="Assets\sayitright.wav" />
     <None Remove="Assets\YellowTile.png" />
   </ItemGroup>
 
@@ -45,6 +46,9 @@
     <Resource Include="Assets\OrangeTile.png" />
     <Resource Include="Assets\PurpleTile.png" />
     <Resource Include="Assets\RedTile.png" />
+    <Content Include="Assets\sayitright.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\YellowTile.png" />
   </ItemGroup>
 

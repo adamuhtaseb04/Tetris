@@ -13,6 +13,7 @@
      ResizeMode="NoResize"
      WindowStartupLocation="CenterScreen">
 
+    
   <Grid>
       <Grid.RowDefinitions>
           <RowDefinition Height="auto" />

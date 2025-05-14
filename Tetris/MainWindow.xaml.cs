@@ -9,16 +9,18 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media;
+
 namespace Tetris;
 
 public partial class MainWindow : Window
 {
-
-    private readonly Image[,] imageControls;        // 2D array of image controls for game grid
-    private readonly int maxDelay = 1000;           // max delay for drop drop speed (ms)
-    private readonly int minDelay = 75;             // min delay for drop drop speed (ms)
-    private readonly int delayDecrease = 25;        // delay decrease for drop drop speed (ms)
-    private GameState gameState = new GameState();  // the current game state
+    private readonly Image[,] imageControls;                    // 2D array of image controls for game grid
+    private readonly int maxDelay = 1000;                       // max delay for drop drop speed (ms)
+    private readonly int minDelay = 75;                         // min delay for drop drop speed (ms)
+    private readonly int delayDecrease = 25;                    // delay decrease for drop drop speed (ms)
+    private GameState gameState = new GameState();              // the current game state
+    private MediaPlayer backgroundPlayer = new MediaPlayer();   // background music player
 
     // array of tile graphics
     private readonly ImageSource[] tileImages = new ImageSource[] {
@@ -48,6 +50,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        PlayBackgroundMusic();
         imageControls = SetupGameCanvas(gameState.gameGrid);
     }
 
@@ -208,5 +211,23 @@ public partial class MainWindow : Window
         gameState = new GameState();
         GameOverMenu.Visibility = Visibility.Hidden;
         await GameLoop();
+    }
+
+    // play background music
+    private void PlayBackgroundMusic()
+    {
+        string path = System.IO.Path.GetFullPath("Assets/sayitright.wav");
+        if (!System.IO.File.Exists(path))
+        {
+            MessageBox.Show($"Music file not found: {path}");
+            return;
+        }
+        backgroundPlayer.Open(new Uri(path));
+        backgroundPlayer.MediaEnded += (s, e) => {
+            backgroundPlayer.Position = TimeSpan.Zero;
+            backgroundPlayer.Play();
+        };
+        backgroundPlayer.Volume = 0.8;
+        backgroundPlayer.Play();
     }
 }
