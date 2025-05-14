@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Background.png" />
+    <None Remove="Assets\BlockEmpty.png" />
+    <None Remove="Assets\BlockI.png" />
+    <None Remove="Assets\BlockJ.png" />
+    <None Remove="Assets\BlockL.png" />
+    <None Remove="Assets\BlockO.png" />
+    <None Remove="Assets\BlockS.png" />
+    <None Remove="Assets\BlockT.png" />
+    <None Remove="Assets\BlockZ.png" />
+    <None Remove="Assets\BlueTile.png" />
+    <None Remove="Assets\CyanTile.png" />
+    <None Remove="Assets\EmptyTile.png" />
+    <None Remove="Assets\GreenTile.png" />
+    <None Remove="Assets\OrangeTile.png" />
+    <None Remove="Assets\PurpleTile.png" />
+    <None Remove="Assets\RedTile.png" />
+    <None Remove="Assets\YellowTile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Background.png" />
+    <Resource Include="Assets\BlockEmpty.png" />
+    <Resource Include="Assets\BlockI.png" />
+    <Resource Include="Assets\BlockJ.png" />
+    <Resource Include="Assets\BlockL.png" />
+    <Resource Include="Assets\BlockO.png" />
+    <Resource Include="Assets\BlockS.png" />
+    <Resource Include="Assets\BlockT.png" />
+    <Resource Include="Assets\BlockZ.png" />
+    <Resource Include="Assets\BlueTile.png" />
+    <Resource Include="Assets\CyanTile.png" />
+    <Resource Include="Assets\EmptyTile.png" />
+    <Resource Include="Assets\GreenTile.png" />
+    <Resource Include="Assets\OrangeTile.png" />
+    <Resource Include="Assets\PurpleTile.png" />
+    <Resource Include="Assets\RedTile.png" />
+    <Resource Include="Assets\YellowTile.png" />
+  </ItemGroup>
+
+</Project>
