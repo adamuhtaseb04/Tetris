@@ -22,6 +22,7 @@
     <None Remove="Assets\CyanTile.png" />
     <None Remove="Assets\EmptyTile.png" />
     <None Remove="Assets\GreenTile.png" />
+    <None Remove="Assets\icon.ico" />
     <None Remove="Assets\OrangeTile.png" />
     <None Remove="Assets\PurpleTile.png" />
     <None Remove="Assets\RedTile.png" />
@@ -43,6 +44,7 @@
     <Resource Include="Assets\CyanTile.png" />
     <Resource Include="Assets\EmptyTile.png" />
     <Resource Include="Assets\GreenTile.png" />
+    <Resource Include="Assets\icon.ico" />
     <Resource Include="Assets\OrangeTile.png" />
     <Resource Include="Assets\PurpleTile.png" />
     <Resource Include="Assets\RedTile.png" />
